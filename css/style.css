@@ -1,0 +1,116 @@
+@font-face {
+  font-family: 'Poppins-Bold';
+  font-style: normal;
+  src: url('../fonts/Poppins-Bold.ttf');
+}
+@font-face {
+  font-family: 'Poppins-Medium';
+  font-style: normal;
+  src: url('../fonts/Poppins-Medium.ttf');
+}
+@font-face {
+  font-family: 'Poppins-Regular';
+  font-style: normal;
+  src: url('../fonts/Poppins-Regular.ttf');
+}
+@font-face {
+  font-family: 'Poppins-Light';
+  font-style: normal;
+  src: url('../fonts/Poppins-Light.ttf');
+}
+@font-face {
+  font-family: 'Thyssen J Italic';
+  src: url('../fonts/Thyssen J Italic.ttf');
+}
+@font-face {
+  font-family: 'Circus Of Innocents';
+  src: url('../fonts/Circus Of Innocents.ttf');
+}
+:root{
+  --color--orange: rgb(245, 90, 0);
+  --color-black-primary: rgb(43, 43, 43);
+  --color-blue: rgb(37, 75, 88);
+  --taille--titre-secondaire: 2.0rem;
+  --small-size-title: 0.8rem;
+  --size-text-btn-action: 0.8rem;
+  --size-text-input: 0.8rem;
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  width: 100%;
+  height: 100vh;
+}
+
+.logo{
+  width: 70px;
+  height: 70px;
+  opacity: 0;
+  transition: opacity 0.5s linear;
+  transition-delay: 0s;
+}
+.logo__anime{
+  opacity: 1.0;
+}
+.titre__secondaire{
+  color: white;
+  font-size:var(--taille--titre-secondaire) ;
+}
+.btn__action{
+  padding: 10px 100px;
+  font-family: 'Poppins-Medium';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  text-align: center;
+  color: white;
+  border-radius: 8px !important;
+  font-size: var(--size-text-btn-action) !important;
+  overflow: hidden;
+}
+
+
+
+/* Ripple Styles start */
+  .ripple{
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .ripple:hover{
+    box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+    transition: 0.5s all ease-in-out;
+  }
+
+  .ripple:active{
+    box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+    transition: 0.5s all ease-in-out;
+  }
+
+  .ripple .ripple-animation{
+    position: absolute;
+    border-radius: 100%;
+    animation: ripple 0.8s;
+    transform: scale(0);
+  }
+
+  .ripple-light .ripple-animation{
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  .ripple-dark .ripple-animation{
+    background: rgba(1, 1, 1, 0.3);
+   }
+
+  @keyframes ripple {
+
+    100%{
+      transform: scale(2);
+      opacity: 0;
+    }
+  }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Restaurant</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/splash.css">
+</head>
+<body>
+  <div class="splash_screen">
+    <img src="./images/icons/logo.svg" alt="" class="logo">
+    <h1 class="titre__secondaire name_app">Recette Quotidienne</h1>
+    <h6 class="devise">La cuisine faite de la manière facile</h6>
+    <div class="btns-splash">
+      <div class="btn__action ripple ripple-light">
+        S'incrire
+      </div>
+      <div class="btn__action">
+       Connexion
+      </div>
+    </div>
+  </div>
+<script src="./js/logo--effect.js"></script>
+<script src="./js/splash--effect.js"></script>
+<script src="./js/ripple.js"></script>
+<script>
+  document.querySelector('.btns-splash :nth-child(1)').
+  addEventListener('click',()=>{
+    window.location.assign('inscription.html')
+  })
+  document.querySelector('.btns-splash :nth-child(2)').
+  addEventListener('click',()=>{
+    window.location.assign('connexion.html')
+  })
+</script>
+</body>
+</html>

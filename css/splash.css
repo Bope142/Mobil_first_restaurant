@@ -1,0 +1,66 @@
+.splash_screen{
+  background: url('../images/splash-screen/splash (4).jpg') center/cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.splash_screen h1{
+  font-style: italic;
+  font-family: 'Circus Of Innocents';
+  font-weight: normal;
+}
+.name_app{
+  opacity: 0;
+  transition: all 0.5s linear;
+  transform: translateX(-100%);
+  transition-delay: 0.6s;
+}
+.title_app{
+  transform :translateX(0);
+  opacity: 1.0;
+}
+.splash_screen h6{
+  font-family: 'Poppins-Regular';
+  color: white;
+  font-weight: normal;
+  font-size: var(--small-size-title);
+  margin-top: 10px;
+  margin-bottom: 100px;
+}
+.devise{
+ opacity: 0;
+ transform: translateY(800%);
+ transition: all 0.5s linear;
+ transition-delay: 0.8s !important;
+}
+.devise-show{
+  transform: translateY(0);
+  opacity: 0.7;
+}
+.btns-splash{
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: 10px;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.5s linear;
+ transition-delay: 0.15s !important;
+}
+.btn__visible{
+  opacity: 1.0;
+  transform: translateX(-50%);
+}
+.btns-splash :nth-child(1) {
+  /* style */
+  background: var(--color--orange);
+}
